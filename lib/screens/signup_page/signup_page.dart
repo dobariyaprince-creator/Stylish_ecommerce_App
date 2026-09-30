@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:stylish/appcolors.dart';
@@ -153,6 +154,7 @@ class _SignupPageState extends State<SignupPage> {
                     if(value.length < 6){
                       return 'Password must be at least 6 characters';
                     }
+                    return null;
                   },
                 ),
               ),
@@ -213,6 +215,7 @@ class _SignupPageState extends State<SignupPage> {
                     if(value != passwordController.text){
                       return 'Password does not match';
                     }
+                    return null;
                   },
                 ),
               ),
